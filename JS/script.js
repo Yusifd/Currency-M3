@@ -14,12 +14,12 @@ const getCurrencyData = async (event) => {
             event.target===resultInput ? fromInput.value=resultInput.value:resultInput.value = fromInput.value;
             const currencyDescription = document.querySelectorAll('.currency-description');
             currencyDescription.forEach((item)=>{
-                item.textContent = `1 ${fromCurrency} = 1 ${toCurrency}`;
+                item.textContent = `1 ${fromCurrency.toUpperCase()} = 1 ${toCurrency.toUpperCase()}`;
             })
     }else{
-        const response1 = await fetch(`https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies/${fromCurrency.toLowerCase()}.min.json`);
+        const response1 = await fetch(`https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies/${fromCurrency}.min.json`);
         const data1 = await response1.json();
-        const response2 = await fetch(`https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies/${toCurrency.toLowerCase()}.min.json`);
+        const response2 = await fetch(`https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies/${toCurrency}.min.json`);
         const data2 = await response2.json();
 
         if(event.target===resultInput){
@@ -28,9 +28,9 @@ const getCurrencyData = async (event) => {
             resultInput.value = Number(fromInput.value) * data1[`${fromCurrency}`][`${toCurrency}`];
         }
         const currencyDescriptionFrom = document.getElementById('currency-description-from');
-        currencyDescriptionFrom.textContent = `1 ${fromCurrency} = ${data1[`${fromCurrency}`][toCurrency]} ${toCurrency}` ;
+        currencyDescriptionFrom.textContent = `1 ${fromCurrency.toUpperCase()} = ${data1[`${fromCurrency}`][toCurrency]} ${toCurrency.toUpperCase()}` ;
         const currencyDescriptionTo = document.getElementById('currency-description-to')
-        currencyDescriptionTo.textContent = `1 ${toCurrency} = ${data2[`${toCurrency}`][fromCurrency]} ${fromCurrency}` ;
+        currencyDescriptionTo.textContent = `1 ${toCurrency.toUpperCase()} = ${data2[`${toCurrency}`][fromCurrency]} ${fromCurrency.toUpperCase()}` ;
     }  
 }
 function currencyHandler(event){

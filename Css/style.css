@@ -4,13 +4,10 @@
     padding:0;
     box-sizing: border-box;
 }
-
 body{
     font-family: Roboto;
     width: 100%;
 }
-
-
 .currencies-container{
     width: 641px;
     margin: 100px auto;
@@ -19,13 +16,12 @@ body{
     font-size: 36px;
     line-height: 42.19px;
     margin-bottom: 33px;
+    font-weight: 700;
 }
-
 .currencies{
     display: flex;
     gap:123px;
 }
-
 .currencies p.currency-text{
     color: #9F9F9F;
     font-size: 12px;
@@ -80,7 +76,7 @@ body{
 .currencies .input-container input{
     height: 38px;
     font-size:36px;
-    font-family: Roboto;
+    font-weight: 700;
     width: 100%;
     border: none;
     outline:none;
