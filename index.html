@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Css/style.css">
+    <title>Currency Converter</title>
+</head>
+<body>
+    <div class="container">
+        <div class="currencies-container">
+            <h1 class="container-header">Конвертер валют онлайн</h1>
+            <div class="currencies">
+                <div id="currency-from">
+                    <p class="currency-text">У меня есть</p>
+                    <div id="radio-from-buttons">                        
+                       <input type="radio" name="from" value="rub" id="fromRub" checked>
+                       <label for="fromRub">RUB</label>
+                       <input type="radio" name="from" value="usd" id="fromUsd">
+                       <label for="fromUsd">USD</label>
+                       <input type="radio" name="from" value="eur" id="fromEur">
+                       <label for="fromEur">EUR</label>
+                       <input type="radio" name="from" value="gbp" id="fromGbp">
+                       <label for="fromGbp">GBP</label>
+                    </div>
+                    <div class="input-container">
+                        <input id="input-from" type="number">
+                        <p id='currency-description-from'class="currency-description">1 RUB = 0.0135 USD</p>
+                    </div>
+                </div>
+                <div id="currency-to">
+                    <p class="currency-text">Хочу приобрести</p>
+                    <div id="radio-to-buttons">                        
+                        <input type="radio" name="to" value="rub" id="toRub">
+                        <label for="toRub">RUB</label>
+                        <input type="radio" name="to" value="usd" id="toUsd" checked>
+                        <label for="toUsd">USD</label>
+                        <input type="radio" name="to" value="eur" id="toEur">
+                        <label for="toEur">EUR</label>
+                        <input type="radio" name="to" value="gbp" id="toGbp">
+                        <label for="toGbp">GBP</label>
+                     </div>
+                    <div class="input-container">
+                        <input id="input-to" type="number">
+                        <p id='currency-description-to' class="currency-description">1 USD = 73.8896 RUB</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/JS/script.js"></script>  
+</body>
+</html>
