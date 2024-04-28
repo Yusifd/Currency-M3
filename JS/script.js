@@ -22,7 +22,9 @@ const getCurrencyData = async (event) => {
         const response2 = await fetch(`https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies/${toCurrency}.min.json`);
         const data2 = await response2.json();
 
-        if(event.target===resultInput){
+        if(fromInput.value<0 || resultInput.value<0){
+            alert('Неправильное значение!')            
+        }else if(event.target===resultInput){            
             fromInput.value = Number(resultInput.value) * data2[`${toCurrency}`][`${fromCurrency}`];
         }else{
             resultInput.value = Number(fromInput.value) * data1[`${fromCurrency}`][`${toCurrency}`];
