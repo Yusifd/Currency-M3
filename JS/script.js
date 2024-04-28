@@ -1,15 +1,14 @@
 const fromInput = document.getElementById('input-from');
 const resultInput = document.getElementById('input-to');
-var fromCurrency;
-var toCurrency;
+
 const getCurrencyData = async (event) => {
       const buttonsFrom = document.querySelector('#radio-from-buttons input[name="from"]:checked');
       const buttonsResult = document.querySelector('#radio-to-buttons input[name="to"]:checked');
       if(!buttonsFrom || !buttonsResult){
         return;
       }
-      fromCurrency=buttonsFrom.value
-       toCurrency=buttonsResult.value
+      let fromCurrency=buttonsFrom.value
+       let toCurrency=buttonsResult.value
         if(fromCurrency===toCurrency) {       
             event.target===resultInput ? fromInput.value=resultInput.value:resultInput.value = fromInput.value;
             const currencyDescription = document.querySelectorAll('.currency-description');
