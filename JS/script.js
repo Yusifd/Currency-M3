@@ -38,7 +38,7 @@ const getCurrencyData = async (event) => {
 function currencyHandler(event){
     getCurrencyData(event)
     .catch(error => {
-        alert(`${error}! Something went wrong!`);
+        alert(`${error}! Что-то пошло не так! Пожалуйста повторите попытку позже!`);
     })
 }
 document.querySelectorAll('input[name="from"]').forEach(radio => {
